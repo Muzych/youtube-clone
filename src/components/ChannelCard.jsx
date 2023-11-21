@@ -6,7 +6,7 @@ import { demoProfilePicture } from '../utils/constants';
 
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
-const ChannelCard = ({ channelId }) => {
+const ChannelCard = ({ channelId, marginTop }) => {
 
   const [Channel, setChannel] = useState('');
 
@@ -28,7 +28,8 @@ const ChannelCard = ({ channelId }) => {
         alignItems: 'center',
         width: { xs: '356px', md: '320px' },
         height: '326px',
-        margin: 'auto'
+        margin: 'auto',
+        marginTop,
       }}
     >
       <Link to={`/channel/${Channel?.id}`}>
